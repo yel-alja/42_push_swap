@@ -6,7 +6,7 @@
 /*   By: yel-alja <yel-alja@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/29 15:59:32 by yel-alja          #+#    #+#             */
-/*   Updated: 2025/01/15 09:04:02 by yel-alja         ###   ########.fr       */
+/*   Updated: 2025/01/17 08:32:08 by yel-alja         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ void				free_list(t_stack *list);
 
 void				sort_three(t_stack **a);
 void				sort_list(t_stack **a, t_stack **b);
+void				sort_five(t_stack **a , t_stack **b);
 
 void				sb(t_stack **b);
 void				sa(t_stack **a);
@@ -50,11 +51,9 @@ void				rrb(t_stack **a);
 void				rrr(t_stack **a, t_stack **b);
 
 // remove
-int					find_best(t_stack *a, t_stack *b);
 
 int					small_number(t_stack *a);
 int					biggest_number(t_stack *a);
-void				print_a(t_stack *a);
 int					wich_half(t_stack *a, int i);
 int					small_great(t_stack *b, int i);
 void				turk_algo(t_stack **a, t_stack **b);

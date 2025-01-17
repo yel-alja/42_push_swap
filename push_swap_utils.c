@@ -6,7 +6,7 @@
 /*   By: yel-alja <yel-alja@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/04 09:40:16 by yel-alja          #+#    #+#             */
-/*   Updated: 2025/01/15 20:19:11 by yel-alja         ###   ########.fr       */
+/*   Updated: 2025/01/16 11:29:57 by yel-alja         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,13 +72,4 @@ int	wich_half(t_stack *a, int i)
 	else if (index >= lengh / 2)
 		return (2);
 	return (0);
-}
-
-void	print_a(t_stack *a)
-{
-	while (a)
-	{
-		printf("%d\n", a->i); // remove this
-		a = a->next;
-	}
 }
