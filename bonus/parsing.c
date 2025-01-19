@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   arg_lst.c                                          :+:      :+:    :+:   */
+/*   parsing.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yel-alja <yel-alja@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/05 15:30:18 by yel-alja          #+#    #+#             */
-/*   Updated: 2025/01/17 09:05:41 by yel-alja         ###   ########.fr       */
+/*   Created: 2025/01/19 09:56:56 by yel-alja          #+#    #+#             */
+/*   Updated: 2025/01/19 09:57:09 by yel-alja         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "checker.h"
 
 void	add_to_stack(t_stack **a, char *str, char **s)
 {
@@ -40,9 +40,9 @@ void	add_to_stack(t_stack **a, char *str, char **s)
 
 void	arg_lst(t_stack **a, char **argv, int argc)
 {
-	char	**str;
-	int		i;
-	int		j;
+	char **str;
+	int i;
+	int j;
 
 	i = 1;
 	while (i < argc)

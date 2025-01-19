@@ -6,11 +6,11 @@
 /*   By: yel-alja <yel-alja@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/03 09:08:51 by yel-alja          #+#    #+#             */
-/*   Updated: 2025/01/07 21:34:33 by yel-alja         ###   ########.fr       */
+/*   Updated: 2025/01/19 21:16:56 by yel-alja         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../include/push_swap.h"
 
 static int	ft_strlen(char *str)
 {

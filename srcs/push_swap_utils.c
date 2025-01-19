@@ -6,11 +6,11 @@
 /*   By: yel-alja <yel-alja@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/04 09:40:16 by yel-alja          #+#    #+#             */
-/*   Updated: 2025/01/18 21:28:34 by yel-alja         ###   ########.fr       */
+/*   Updated: 2025/01/19 21:17:15 by yel-alja         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../include/push_swap.h"
 
 int	list_lengh(t_stack *a)
 {

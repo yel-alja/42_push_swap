@@ -1,30 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rra.c                                              :+:      :+:    :+:   */
+/*   pa.c                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yel-alja <yel-alja@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/08 21:01:11 by yel-alja          #+#    #+#             */
-/*   Updated: 2025/01/18 13:00:44 by yel-alja         ###   ########.fr       */
+/*   Created: 2025/01/09 09:36:56 by yel-alja          #+#    #+#             */
+/*   Updated: 2025/01/19 21:17:07 by yel-alja         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../include/push_swap.h"
 
-void	rra(t_stack **a)
+void	pa(t_stack **a, t_stack **b)
 {
-	t_stack	*current;
-	t_stack	*stack;
+	t_stack	*tmp;
+	t_stack	*tmp2;
 
-	current = (*a);
-	while (current->next)
-	{
-		stack = current;
-		current = current->next;
-	}
-	current->next = (*a);
-	stack->next = NULL;
-	(*a) = current;
-	write(1, "rra\n", 4);
+	tmp = (*b)->next;
+	tmp2 = (*a);
+	(*a) = (*b);
+	(*a)->next = tmp2;
+	(*b) = tmp;
+	write(1, "pa\n", 3);
 }

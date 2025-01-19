@@ -1,42 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   count_moves.c                                      :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yel-alja <yel-alja@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/16 11:26:24 by yel-alja          #+#    #+#             */
-/*   Updated: 2025/01/16 11:45:57 by yel-alja         ###   ########.fr       */
+/*   Created: 2024/12/30 10:18:25 by yel-alja          #+#    #+#             */
+/*   Updated: 2025/01/19 21:16:52 by yel-alja         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../include/push_swap.h"
 
-int	count_moves(t_stack *b, int target)
+int	sk_sp(char *str)
 {
-	int	moves;
-	int	index;
-	int	len;
+	int	i;
 
-	moves = 0;
-	index = 0;
-	len = list_lengh(b);
-	if ((wich_half(b, target)) == 1)
+	i = 0;
+	while (str[i] == 32 || (str[i] >= 9 && str[i] <= 13))
+		i++;
+	return (i);
+}
+
+long long	ft_atoi(char *str)
+{
+	int			i;
+	long long	r;
+	int			s;
+
+	r = 0;
+	s = 1;
+	i = sk_sp(str);
+	if (str[i] == '-' || str[i] == '+')
 	{
-		while (b && (b->i != target))
-		{
-			moves++;
-			b = b->next;
-		}
+		if (str[i] == '-')
+			s *= -1;
+		i++;
 	}
-	else if ((wich_half(b, target)) == 2)
+	while (str[i] >= '0' && str[i] <= '9')
 	{
-		while (b && (b->i != target))
-		{
-			index++;
-			b = b->next;
-		}
-		moves = len - index;
+		r = r * 10 + str[i] - 48;
+		i++;
 	}
-	return (moves);
+	return (r * s);
 }

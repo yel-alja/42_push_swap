@@ -1,30 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rb.c                                               :+:      :+:    :+:   */
+/*   pb.c                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yel-alja <yel-alja@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/08 16:00:46 by yel-alja          #+#    #+#             */
-/*   Updated: 2025/01/18 12:58:56 by yel-alja         ###   ########.fr       */
+/*   Created: 2025/01/08 11:20:07 by yel-alja          #+#    #+#             */
+/*   Updated: 2025/01/19 21:17:11 by yel-alja         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../include/push_swap.h"
 
-void	rb(t_stack **b)
+void	pb(t_stack **a, t_stack **b)
 {
-	t_stack	*current;
-	int		tmp;
+	t_stack	*tmp;
+	t_stack	*tmp2;
 
-	current = NULL;
-	current = (*b);
-	tmp = (*b)->i;
-	while (current->next)
-	{
-		current->i = current->next->i;
-		current = current->next;
-	}
-	current->i = tmp;
-	write(1, "rb\n", 3);
+	tmp = (*a)->next;
+	tmp2 = (*b);
+	(*b) = (*a);
+	(*b)->next = tmp2;
+	(*a) = tmp;
+	write(1, "pb\n", 3);
 }

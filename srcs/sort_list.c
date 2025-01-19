@@ -6,11 +6,11 @@
 /*   By: yel-alja <yel-alja@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/05 10:10:03 by yel-alja          #+#    #+#             */
-/*   Updated: 2025/01/17 21:51:02 by yel-alja         ###   ########.fr       */
+/*   Updated: 2025/01/19 21:16:27 by yel-alja         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../include/push_swap.h"
 
 void	sort_list(t_stack **a, t_stack **b)
 {

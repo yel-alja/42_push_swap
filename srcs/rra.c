@@ -1,36 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rr.c                                               :+:      :+:    :+:   */
+/*   rra.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yel-alja <yel-alja@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/08 16:04:03 by yel-alja          #+#    #+#             */
-/*   Updated: 2025/01/18 12:59:04 by yel-alja         ###   ########.fr       */
+/*   Created: 2025/01/08 21:01:11 by yel-alja          #+#    #+#             */
+/*   Updated: 2025/01/19 21:17:29 by yel-alja         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../include/push_swap.h"
 
-void	rotate_lst(t_stack **a)
+void	rra(t_stack **a)
 {
 	t_stack	*current;
-	int		tmp;
+	t_stack	*stack;
 
-	current = NULL;
 	current = (*a);
-	tmp = (*a)->i;
 	while (current->next)
 	{
-		current->i = current->next->i;
+		stack = current;
 		current = current->next;
 	}
-	current->i = tmp;
-}
-
-void	rr(t_stack **a, t_stack **b)
-{
-	rotate_lst(a);
-	rotate_lst(b);
-	write(1, "rr\n", 3);
+	current->next = (*a);
+	stack->next = NULL;
+	(*a) = current;
+	write(1, "rra\n", 4);
 }

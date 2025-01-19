@@ -6,11 +6,11 @@
 /*   By: yel-alja <yel-alja@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 16:03:30 by yel-alja          #+#    #+#             */
-/*   Updated: 2025/01/18 21:41:54 by yel-alja         ###   ########.fr       */
+/*   Updated: 2025/01/19 21:18:09 by yel-alja         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../include/push_swap.h"
 
 int	small_great(t_stack *head, int value)
 {

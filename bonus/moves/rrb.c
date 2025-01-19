@@ -6,11 +6,11 @@
 /*   By: yel-alja <yel-alja@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/08 22:40:24 by yel-alja          #+#    #+#             */
-/*   Updated: 2025/01/18 13:00:48 by yel-alja         ###   ########.fr       */
+/*   Updated: 2025/01/19 10:46:19 by yel-alja         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../checker.h"
 
 void	rrb(t_stack **a)
 {

@@ -1,36 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rrr.c                                              :+:      :+:    :+:   */
+/*   pb.c                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yel-alja <yel-alja@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/09 09:08:38 by yel-alja          #+#    #+#             */
-/*   Updated: 2025/01/18 13:00:51 by yel-alja         ###   ########.fr       */
+/*   Created: 2025/01/08 11:20:07 by yel-alja          #+#    #+#             */
+/*   Updated: 2025/01/19 10:46:38 by yel-alja         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../checker.h"
 
-void	r_r(t_stack **a)
+void	pb(t_stack **a, t_stack **b)
 {
-	t_stack	*current;
-	t_stack	*stack;
+	t_stack	*tmp;
+	t_stack	*tmp2;
 
-	current = (*a);
-	while (current->next)
-	{
-		stack = current;
-		current = current->next;
-	}
-	current->next = (*a);
-	stack->next = NULL;
-	(*a) = current;
-}
-
-void	rrr(t_stack **a, t_stack **b)
-{
-	r_r(a);
-	r_r(b);
-	write(1, "rrr\n", 4);
+	tmp = (*a)->next;
+	tmp2 = (*b);
+	(*b) = (*a);
+	(*b)->next = tmp2;
+	(*a) = tmp;
+	write(1, "pb\n", 3);
 }

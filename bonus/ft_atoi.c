@@ -6,11 +6,11 @@
 /*   By: yel-alja <yel-alja@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/30 10:18:25 by yel-alja          #+#    #+#             */
-/*   Updated: 2025/01/12 11:47:38 by yel-alja         ###   ########.fr       */
+/*   Updated: 2025/01/19 10:42:45 by yel-alja         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "checker.h"
 
 int	sk_sp(char *str)
 {

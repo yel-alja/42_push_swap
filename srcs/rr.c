@@ -1,26 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   pa.c                                               :+:      :+:    :+:   */
+/*   rr.c                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yel-alja <yel-alja@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/09 09:36:56 by yel-alja          #+#    #+#             */
-/*   Updated: 2025/01/18 12:58:11 by yel-alja         ###   ########.fr       */
+/*   Created: 2025/01/08 16:04:03 by yel-alja          #+#    #+#             */
+/*   Updated: 2025/01/19 21:17:24 by yel-alja         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../include/push_swap.h"
 
-void	pa(t_stack **a, t_stack **b)
+void	rotate_lst(t_stack **a)
 {
-	t_stack	*tmp;
-	t_stack	*tmp2;
+	t_stack	*current;
+	int		tmp;
 
-	tmp = (*b)->next;
-	tmp2 = (*a);
-	(*a) = (*b);
-	(*a)->next = tmp2;
-	(*b) = tmp;
-	write(1, "pa\n", 3);
+	current = NULL;
+	current = (*a);
+	tmp = (*a)->i;
+	while (current->next)
+	{
+		current->i = current->next->i;
+		current = current->next;
+	}
+	current->i = tmp;
+}
+
+void	rr(t_stack **a, t_stack **b)
+{
+	rotate_lst(a);
+	rotate_lst(b);
+	write(1, "rr\n", 3);
 }

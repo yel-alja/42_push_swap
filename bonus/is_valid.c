@@ -6,11 +6,11 @@
 /*   By: yel-alja <yel-alja@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/05 11:19:17 by yel-alja          #+#    #+#             */
-/*   Updated: 2025/01/13 10:03:34 by yel-alja         ###   ########.fr       */
+/*   Updated: 2025/01/19 10:44:35 by yel-alja         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "checker.h"
 
 int	_is_digit(char **str)
 {

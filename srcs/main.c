@@ -6,11 +6,11 @@
 /*   By: yel-alja <yel-alja@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/30 09:29:34 by yel-alja          #+#    #+#             */
-/*   Updated: 2025/01/18 21:42:12 by yel-alja         ###   ########.fr       */
+/*   Updated: 2025/01/19 21:17:04 by yel-alja         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../include/push_swap.h"
 
 t_stack	*lst_new(int i, t_stack **a)
 {

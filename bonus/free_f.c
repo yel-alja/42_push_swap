@@ -1,30 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sb.c                                               :+:      :+:    :+:   */
+/*   free_f.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yel-alja <yel-alja@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/08 10:15:47 by yel-alja          #+#    #+#             */
-/*   Updated: 2025/01/18 12:59:47 by yel-alja         ###   ########.fr       */
+/*   Created: 2025/01/19 10:33:58 by yel-alja          #+#    #+#             */
+/*   Updated: 2025/01/19 10:34:28 by yel-alja         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "checker.h"
 
-void	sb(t_stack **b)
+void	free_s(char **c)
 {
-	t_stack	*first;
-	t_stack	*second;
-	int		tmp;
+	int	i;
 
-	first = (*b);
-	second = (*b)->next;
-	if (first->i > second->i)
+	i = 0;
+	while (c[i])
 	{
-		tmp = first->i;
-		first->i = second->i;
-		second->i = tmp;
-		write(1, "sb\n", 3);
+		free(c[i]);
+		i++;
 	}
+	free(c);
+}
+
+void	free_list(t_stack *list)
+{
+	t_stack *tmp;
+
+	while (list)
+	{
+		tmp = list;
+		list = list->next;
+		free(tmp);
+	}
+	free(list);
 }
