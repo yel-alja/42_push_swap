@@ -6,19 +6,22 @@
 /*   By: yel-alja <yel-alja@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/30 09:29:34 by yel-alja          #+#    #+#             */
-/*   Updated: 2025/01/16 11:23:59 by yel-alja         ###   ########.fr       */
+/*   Updated: 2025/01/18 21:42:12 by yel-alja         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-t_stack	*lst_new(int i)
+t_stack	*lst_new(int i, t_stack **a)
 {
 	t_stack	*new_node;
 
 	new_node = (t_stack *)malloc(sizeof(t_stack));
 	if (new_node == NULL)
-		return (NULL);
+	{
+		free_list(*a);
+		exit(1);
+	}
 	new_node->i = i;
 	new_node->next = NULL;
 	return (new_node);
@@ -71,5 +74,11 @@ int	main(int argc, char **argv)
 		return (0);
 	}
 	sort_list(&a, &b);
+	// while(a)
+	// {
+	// 	printf("%d\n",a->i);
+	// 	a=a->next;
+	// }
 	free_list(a);
 }
+

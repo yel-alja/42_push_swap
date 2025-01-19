@@ -6,13 +6,13 @@
 /*   By: yel-alja <yel-alja@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/09 20:21:03 by yel-alja          #+#    #+#             */
-/*   Updated: 2025/01/17 08:25:02 by yel-alja         ###   ########.fr       */
+/*   Updated: 2025/01/19 08:37:25 by yel-alja         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	node_move(t_stack *a, t_stack *b, int target)
+int	data_move(t_stack *a, t_stack *b)
 {
 	t_stack	*head_a;
 	t_stack	*head_b;
@@ -25,23 +25,30 @@ int	node_move(t_stack *a, t_stack *b, int target)
 	moves = 5500;
 	while (a)
 	{
-		if (target == 1)
+		count = count_moves(head_a, a->i) + count_moves(head_b, small_great(b,
+					a->i));
+		if (count < moves)
 		{
-			count = count_moves(head_a, a->i) + count_moves(head_b,
-					small_great(b, a->i));
-			if (count < moves)
-			{
-				moves = count;
-				i = a->i;
-			}
-			a = a->next;
+			moves = count;
+			i = a->i;
 		}
+		a = a->next;
 	}
 	return (i);
 }
 
-void	node_top(t_stack **a, int node_data)
+void	node_top(t_stack **a, t_stack **b, int node_data)
 {
+	int	s;
+
+	s = small_great((*b), node_data);
+	if (node_data != (*a)->i && s != (*b)->i)
+	{
+		while (wich_half(*a, node_data) == 1 && wich_half(*b, s) == 1)
+			rr(a, b);
+		while (wich_half(*a, node_data) == 2 && wich_half(*b, s) == 2)
+			rrr(a, b);
+	}
 	while (node_data != (*a)->i)
 	{
 		if (wich_half(*a, node_data) == 1)
@@ -57,15 +64,16 @@ void	node_top(t_stack **a, int node_data)
 	}
 }
 
-void	push_b(t_stack **a, t_stack **b, int s)
+void	push_b(t_stack **a, t_stack **b)
 {
 	int	node_data;
+	int	s;
 
 	while (list_lengh((*a)) >= 4)
 	{
-		node_data = node_move(*a, *b, 1);
-		node_top(a, node_data);
-		s = small_great((*b), (*a)->i);
+		node_data = data_move(*a, *b);
+		node_top(a, b, node_data);
+		s = small_great((*b), node_data);
 		if (wich_half((*b), s) == 1)
 		{
 			while ((*b)->i != s)
@@ -96,13 +104,11 @@ void	small_top(t_stack **a)
 
 void	turk_algo(t_stack **a, t_stack **b)
 {
-	int	s;
 	int	g;
-
-	s = 0;
+	
 	pb(a, b);
 	pb(a, b);
-	push_b(a, b, s);
+	push_b(a, b);
 	sort_three(a);
 	while ((*b))
 	{
@@ -121,3 +127,4 @@ void	turk_algo(t_stack **a, t_stack **b)
 	}
 	small_top(a);
 }
+

@@ -6,7 +6,7 @@
 /*   By: yel-alja <yel-alja@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/05 10:10:03 by yel-alja          #+#    #+#             */
-/*   Updated: 2025/01/17 08:33:14 by yel-alja         ###   ########.fr       */
+/*   Updated: 2025/01/17 21:51:02 by yel-alja         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,23 +73,25 @@ void	sort_four(t_stack **a, t_stack **b)
 	pa(a, b);
 }
 
-void sort_five(t_stack **a , t_stack **b)
+void	sort_five(t_stack **a, t_stack **b)
 {
-	int tmp;
-	int i = 2;
-	while(i--)
+	int	tmp;
+	int	i;
+
+	i = 2;
+	while (i--)
 	{
-	tmp = small_number(*a);
-	while ((*a)->i != tmp)
-	{
-		if (wich_half(*a, tmp) == 1)
-			ra(a);
-		else if (wich_half(*a, tmp) == 2)
-			rra(a);
-	}
-	pb(a, b);
+		tmp = small_number(*a);
+		while ((*a)->i != tmp)
+		{
+			if (wich_half(*a, tmp) == 1)
+				ra(a);
+			else if (wich_half(*a, tmp) == 2)
+				rra(a);
+		}
+		pb(a, b);
 	}
 	sort_three(a);
-	pa(a,b);
-	pa(a,b);
+	pa(a, b);
+	pa(a, b);
 }

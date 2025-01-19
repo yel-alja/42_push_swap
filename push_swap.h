@@ -6,13 +6,16 @@
 /*   By: yel-alja <yel-alja@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/29 15:59:32 by yel-alja          #+#    #+#             */
-/*   Updated: 2025/01/17 08:32:08 by yel-alja         ###   ########.fr       */
+/*   Updated: 2025/01/18 21:28:28 by yel-alja         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <unistd.h>
+#ifndef PUSH_SWAP_H
+# define PUSH_SWAP_H
+
+# include <stdio.h>
+# include <stdlib.h>
+# include <unistd.h>
 
 typedef struct s_stack
 {
@@ -23,7 +26,7 @@ typedef struct s_stack
 long long			ft_atoi(char *str);
 char				**ft_split(char *s, char c);
 void				free_s(char **c);
-t_stack				*lst_new(int i);
+t_stack				*lst_new(int i, t_stack **a);
 void				add_to_stack(t_stack **a, char *str, char **s);
 void				arg_lst(t_stack **a, char **argv, int argc);
 void				is_valid(char **str, t_stack *a);
@@ -33,7 +36,7 @@ void				free_list(t_stack *list);
 
 void				sort_three(t_stack **a);
 void				sort_list(t_stack **a, t_stack **b);
-void				sort_five(t_stack **a , t_stack **b);
+void				sort_five(t_stack **a, t_stack **b);
 
 void				sb(t_stack **b);
 void				sa(t_stack **a);
@@ -60,3 +63,7 @@ void				turk_algo(t_stack **a, t_stack **b);
 int					great_small(t_stack *a, int i);
 void				sort_four(t_stack **a, t_stack **b);
 int					count_moves(t_stack *b, int target);
+
+void				print_move(char *move);
+
+#endif

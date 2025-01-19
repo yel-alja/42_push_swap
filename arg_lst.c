@@ -6,7 +6,7 @@
 /*   By: yel-alja <yel-alja@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/05 15:30:18 by yel-alja          #+#    #+#             */
-/*   Updated: 2025/01/16 20:11:55 by yel-alja         ###   ########.fr       */
+/*   Updated: 2025/01/17 09:05:41 by yel-alja         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	add_to_stack(t_stack **a, char *str, char **s)
 		write(2, "Error\n", 6);
 		exit(1);
 	}
-	tmp = lst_new(l);
+	tmp = lst_new(l, a);
 	if ((*a) == NULL)
 		(*a) = tmp;
 	else
