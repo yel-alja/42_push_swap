@@ -6,7 +6,7 @@
 /*   By: yel-alja <yel-alja@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/19 09:56:56 by yel-alja          #+#    #+#             */
-/*   Updated: 2025/01/19 09:57:09 by yel-alja         ###   ########.fr       */
+/*   Updated: 2025/01/20 10:17:22 by yel-alja         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,9 +40,9 @@ void	add_to_stack(t_stack **a, char *str, char **s)
 
 void	arg_lst(t_stack **a, char **argv, int argc)
 {
-	char **str;
-	int i;
-	int j;
+	char	**str;
+	int		i;
+	int		j;
 
 	i = 1;
 	while (i < argc)

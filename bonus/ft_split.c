@@ -6,7 +6,7 @@
 /*   By: yel-alja <yel-alja@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/19 10:36:48 by yel-alja          #+#    #+#             */
-/*   Updated: 2025/01/19 10:38:04 by yel-alja         ###   ########.fr       */
+/*   Updated: 2025/01/20 10:19:42 by yel-alja         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,9 +81,9 @@ static char	*word(char **s, char c)
 
 char	**ft_split(char *s, char c)
 {
-	char **split;
-	int count;
-	int i;
+	char	**split;
+	int		count;
+	int		i;
 
 	if (s == NULL)
 		return (NULL);

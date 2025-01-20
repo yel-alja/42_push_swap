@@ -6,7 +6,7 @@
 /*   By: yel-alja <yel-alja@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/19 10:33:58 by yel-alja          #+#    #+#             */
-/*   Updated: 2025/01/19 10:34:28 by yel-alja         ###   ########.fr       */
+/*   Updated: 2025/01/20 10:18:40 by yel-alja         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void	free_s(char **c)
 
 void	free_list(t_stack *list)
 {
-	t_stack *tmp;
+	t_stack	*tmp;
 
 	while (list)
 	{

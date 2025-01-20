@@ -6,11 +6,12 @@
 /*   By: yel-alja <yel-alja@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/19 10:19:50 by yel-alja          #+#    #+#             */
-/*   Updated: 2025/01/19 11:06:10 by yel-alja         ###   ########.fr       */
+/*   Updated: 2025/01/20 10:17:47 by yel-alja         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "checker.h"
+#include <fcntl.h>
 
 t_stack	*lst_new(int i, t_stack **a)
 {

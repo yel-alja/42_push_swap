@@ -6,7 +6,7 @@
 /*   By: yel-alja <yel-alja@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/05 09:59:02 by yel-alja          #+#    #+#             */
-/*   Updated: 2025/01/19 10:46:11 by yel-alja         ###   ########.fr       */
+/*   Updated: 2025/01/20 10:09:52 by yel-alja         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ void	sa(t_stack **a)
 	t_stack	*second;
 	int		tmp;
 
+	if ((*a) == NULL || (*a)->next == NULL)
+		return ;
 	first = (*a);
 	second = (*a)->next;
 	if (first->i > second->i)
@@ -26,5 +28,4 @@ void	sa(t_stack **a)
 		first->i = second->i;
 		second->i = tmp;
 	}
-	write(1, "sa\n", 3);
 }

@@ -6,7 +6,7 @@
 /*   By: yel-alja <yel-alja@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/08 16:00:46 by yel-alja          #+#    #+#             */
-/*   Updated: 2025/01/19 10:46:30 by yel-alja         ###   ########.fr       */
+/*   Updated: 2025/01/20 10:11:46 by yel-alja         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	rb(t_stack **b)
 	t_stack	*current;
 	int		tmp;
 
+	if ((*b) == NULL || (*b)->next == NULL)
+		return ;
 	current = NULL;
 	current = (*b);
 	tmp = (*b)->i;
@@ -26,5 +28,4 @@ void	rb(t_stack **b)
 		current = current->next;
 	}
 	current->i = tmp;
-	write(1, "rb\n", 3);
 }

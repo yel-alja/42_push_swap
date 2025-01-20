@@ -6,7 +6,7 @@
 /*   By: yel-alja <yel-alja@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/30 09:29:34 by yel-alja          #+#    #+#             */
-/*   Updated: 2025/01/19 21:17:04 by yel-alja         ###   ########.fr       */
+/*   Updated: 2025/01/20 11:02:41 by yel-alja         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,11 +74,5 @@ int	main(int argc, char **argv)
 		return (0);
 	}
 	sort_list(&a, &b);
-	// while(a)
-	// {
-	// 	printf("%d\n",a->i);
-	// 	a=a->next;
-	// }
 	free_list(a);
 }
-

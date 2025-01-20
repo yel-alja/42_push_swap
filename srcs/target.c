@@ -6,7 +6,7 @@
 /*   By: yel-alja <yel-alja@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 16:03:30 by yel-alja          #+#    #+#             */
-/*   Updated: 2025/01/19 21:18:09 by yel-alja         ###   ########.fr       */
+/*   Updated: 2025/01/20 11:03:19 by yel-alja         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	small_great(t_stack *head, int value)
 {
-	long		tmp;
+	long	tmp;
 	t_stack	*b;
 
 	tmp = -2147483649;
@@ -33,10 +33,9 @@ int	small_great(t_stack *head, int value)
 	return (biggest_number(b));
 }
 
-
 int	great_small(t_stack *a, int i)
 {
-	long		tmp;
+	long	tmp;
 	t_stack	*head;
 
 	tmp = 2147483648;

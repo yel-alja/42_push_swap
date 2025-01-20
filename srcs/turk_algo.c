@@ -6,7 +6,7 @@
 /*   By: yel-alja <yel-alja@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/09 20:21:03 by yel-alja          #+#    #+#             */
-/*   Updated: 2025/01/19 21:18:13 by yel-alja         ###   ########.fr       */
+/*   Updated: 2025/01/20 11:03:22 by yel-alja         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,7 +105,7 @@ void	small_top(t_stack **a)
 void	turk_algo(t_stack **a, t_stack **b)
 {
 	int	g;
-	
+
 	pb(a, b);
 	pb(a, b);
 	push_b(a, b);
@@ -127,4 +127,3 @@ void	turk_algo(t_stack **a, t_stack **b)
 	}
 	small_top(a);
 }
-
