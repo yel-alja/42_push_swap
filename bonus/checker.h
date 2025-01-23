@@ -6,7 +6,7 @@
 /*   By: yel-alja <yel-alja@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/19 09:26:22 by yel-alja          #+#    #+#             */
-/*   Updated: 2025/01/20 09:31:01 by yel-alja         ###   ########.fr       */
+/*   Updated: 2025/01/23 10:06:25 by yel-alja         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,13 @@ void				is_valid(char **str, t_stack *a);
 void				is_valid2(t_stack *a);
 int					is_sorted(t_stack *a);
 void				checker(t_stack **a, t_stack **b);
+char				*get_next_line(int fd);
+char				*ft_strdup(char *str);
+char				*find_line(char *str);
+size_t				ft_strlen(char *str);
+char				*ft_strjoin(char *s1, char *s2);
+void				*ft_memcpy(void *dst, const void *src, size_t n);
+char				*ft_strchr(char *s, int c);
 
 void				sb(t_stack **b);
 void				sa(t_stack **a);

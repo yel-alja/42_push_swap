@@ -6,7 +6,7 @@
 /*   By: yel-alja <yel-alja@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/05 11:19:17 by yel-alja          #+#    #+#             */
-/*   Updated: 2025/01/19 10:44:35 by yel-alja         ###   ########.fr       */
+/*   Updated: 2025/01/23 10:24:04 by yel-alja         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,9 +35,16 @@ int	_is_digit(char **str)
 	return (1);
 }
 
+int	is_empty(char **str)
+{
+	if (str[0] == NULL)
+		return (0);
+	return (1);
+}
+
 void	is_valid(char **str, t_stack *a)
 {
-	if (_is_digit(str) == 0)
+	if (_is_digit(str) == 0 || is_empty(str) == 0)
 	{
 		free_s(str);
 		free_list(a);

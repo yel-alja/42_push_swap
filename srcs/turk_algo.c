@@ -6,7 +6,7 @@
 /*   By: yel-alja <yel-alja@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/09 20:21:03 by yel-alja          #+#    #+#             */
-/*   Updated: 2025/01/20 11:03:22 by yel-alja         ###   ########.fr       */
+/*   Updated: 2025/01/23 11:37:43 by yel-alja         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ void	node_top(t_stack **a, t_stack **b, int node_data)
 			while ((*a)->i != node_data)
 				ra(a);
 		}
-		else if (wich_half(*a, node_data) == 2)
+		else
 		{
 			while ((*a)->i != node_data)
 				rra(a);
@@ -79,7 +79,7 @@ void	push_b(t_stack **a, t_stack **b)
 			while ((*b)->i != s)
 				rb(b);
 		}
-		else if (wich_half((*b), s) == 2)
+		else
 		{
 			while ((*b)->i != s)
 				rrb(b);
@@ -97,7 +97,7 @@ void	small_top(t_stack **a)
 	{
 		if (wich_half(*a, small) == 1)
 			ra(a);
-		else if (wich_half(*a, small) == 2)
+		else
 			rra(a);
 	}
 }
@@ -118,7 +118,7 @@ void	turk_algo(t_stack **a, t_stack **b)
 			while ((*a)->i != g)
 				ra(a);
 		}
-		else if (wich_half((*a), g) == 2)
+		else
 		{
 			while ((*a)->i != g)
 				rra(a);

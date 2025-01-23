@@ -2,14 +2,13 @@ NAME = push_swap
 
 BONUS_NAME = checker
 
-BONUS_SRCS = bonus/checker_utils.c bonus/main_bonus.c \
+BONUS_SRCS = bonus/get_next_line_utils.c bonus/main_bonus.c \
 			 bonus/parsing.c bonus/moves/sa.c bonus/moves/sb.c \
 			 bonus/moves/ss.c bonus/moves/ra.c bonus/moves/rb.c \
 			 bonus/moves/rr.c bonus/moves/rrb.c bonus/moves/rra.c \
 			 bonus/moves/rrr.c bonus/moves/pa.c bonus/moves/pb.c \
 			 bonus/free_f.c bonus/ft_atoi.c bonus/ft_split.c \
-			 bonus/is_valid.c  bonus/checker.c
-
+			 bonus/is_valid.c  bonus/checker.c bonus/get_next_line.c
 
 SRCS = srcs/arg_lst.c  srcs/ft_atoi.c  srcs/ft_split.c  srcs/is_valid.c  srcs/main.c \
 		srcs/push_swap_utils.c srcs/sort_list.c srcs/sa.c srcs/sb.c srcs/ss.c \

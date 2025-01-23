@@ -6,21 +6,11 @@
 /*   By: yel-alja <yel-alja@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/19 10:36:48 by yel-alja          #+#    #+#             */
-/*   Updated: 2025/01/20 10:19:42 by yel-alja         ###   ########.fr       */
+/*   Updated: 2025/01/23 09:14:52 by yel-alja         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "checker.h"
-
-static int	ft_strlen(char *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
-}
 
 static int	count_word(char *s, char c)
 {
