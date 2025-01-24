@@ -22,12 +22,9 @@ void	swap_two(t_stack **a)
 		return ;
 	first = (*a);
 	second = (*a)->next;
-	if (first->i > second->i)
-	{
-		tmp = first->i;
-		first->i = second->i;
-		second->i = tmp;
-	}
+	tmp = first->i;
+	first->i = second->i;
+	second->i = tmp;
 }
 
 void	ss(t_stack **a, t_stack **b)
