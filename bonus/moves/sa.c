@@ -22,10 +22,7 @@ void	sa(t_stack **a)
 		return ;
 	first = (*a);
 	second = (*a)->next;
-	if (first->i > second->i)
-	{
-		tmp = first->i;
-		first->i = second->i;
-		second->i = tmp;
-	}
+	tmp = first->i;
+	first->i = second->i;
+	second->i = tmp;
 }
