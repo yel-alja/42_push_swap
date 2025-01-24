@@ -22,10 +22,7 @@ void	sb(t_stack **b)
 		return ;
 	first = (*b);
 	second = (*b)->next;
-	if (first->i > second->i)
-	{
-		tmp = first->i;
-		first->i = second->i;
-		second->i = tmp;
-	}
+	tmp = first->i;
+	first->i = second->i;
+	second->i = tmp;
 }
