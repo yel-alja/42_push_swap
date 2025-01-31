@@ -17,7 +17,7 @@ SRCS = srcs/arg_lst.c  srcs/ft_atoi.c  srcs/ft_split.c  srcs/is_valid.c  srcs/ma
 OBJS:= $(SRCS:.c=.o)
 
 CC = cc
-CFLAGS = -Wall -Wextra -Werror -g
+CFLAGS = -Wall -Wextra -Werror
 
 all:$(NAME)
 
