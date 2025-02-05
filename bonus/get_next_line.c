@@ -6,7 +6,7 @@
 /*   By: yel-alja <yel-alja@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/23 09:02:48 by yel-alja          #+#    #+#             */
-/*   Updated: 2025/01/23 10:07:02 by yel-alja         ###   ########.fr       */
+/*   Updated: 2025/02/05 09:41:29 by yel-alja         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,7 +79,9 @@ char	*get_next_line(int fd)
 	char		*tmp;
 
 	if (fd < 0)
-		return (NULL);
+	{
+		return (free(buffer) ,NULL);
+	}
 	buff = malloc(2);
 	if (!buff)
 		return (NULL);

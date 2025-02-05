@@ -6,7 +6,7 @@
 /*   By: yel-alja <yel-alja@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/23 09:04:22 by yel-alja          #+#    #+#             */
-/*   Updated: 2025/01/23 10:25:20 by yel-alja         ###   ########.fr       */
+/*   Updated: 2025/02/05 09:43:02 by yel-alja         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,9 +94,7 @@ char	*ft_strchr(char *s, int c)
 	y = (char)c;
 	i = 0;
 	if (!s)
-	{
 		return (NULL);
-	}
 	while (s[i])
 	{
 		if (s[i] == y)

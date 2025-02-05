@@ -6,7 +6,7 @@
 /*   By: yel-alja <yel-alja@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/19 11:04:33 by yel-alja          #+#    #+#             */
-/*   Updated: 2025/01/23 10:27:12 by yel-alja         ###   ########.fr       */
+/*   Updated: 2025/02/05 09:42:17 by yel-alja         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ int	ft_strcmp(char *s1, char *s2)
 void	ft_error(char *line, t_stack *a)
 {
 	write(2, "Error\n", 6);
+	get_next_line(-1);
 	free(line);
 	free_list(a);
 	exit(1);
