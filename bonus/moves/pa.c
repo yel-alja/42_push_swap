@@ -6,7 +6,7 @@
 /*   By: yel-alja <yel-alja@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/09 09:36:56 by yel-alja          #+#    #+#             */
-/*   Updated: 2025/01/20 10:52:11 by yel-alja         ###   ########.fr       */
+/*   Updated: 2025/02/05 09:50:18 by yel-alja         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	pa(t_stack **a, t_stack **b)
 	t_stack	*tmp;
 	t_stack	*tmp2;
 
-	if (!(*a) || !(*b))
+	if (!(*a))
 		return ;
 	tmp = (*b)->next;
 	tmp2 = (*a);
