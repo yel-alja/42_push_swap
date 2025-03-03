@@ -6,7 +6,7 @@
 /*   By: yel-alja <yel-alja@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/30 10:18:25 by yel-alja          #+#    #+#             */
-/*   Updated: 2025/01/23 11:37:02 by yel-alja         ###   ########.fr       */
+/*   Updated: 2025/03/03 12:40:29 by yel-alja         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,11 @@ int	sk_sp(char *str)
 	return (i);
 }
 
-long long	ft_atoi(char *str)
+double	ft_atoi(char *str)
 {
-	int			i;
-	long long	r;
-	int			s;
+	int		i;
+	double	r;
+	int		s;
 
 	r = 0;
 	s = 1;

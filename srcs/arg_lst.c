@@ -6,7 +6,7 @@
 /*   By: yel-alja <yel-alja@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/05 15:30:18 by yel-alja          #+#    #+#             */
-/*   Updated: 2025/01/23 11:36:38 by yel-alja         ###   ########.fr       */
+/*   Updated: 2025/03/03 12:41:19 by yel-alja         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	add_to_stack(t_stack **a, char *str, char **s)
 {
 	t_stack		*tmp;
 	t_stack		*current;
-	long long	l;
+	double		l;
 
 	l = ft_atoi(str);
 	if (l > 2147483647 || l < -2147483648)

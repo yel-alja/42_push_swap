@@ -80,7 +80,7 @@ char	*get_next_line(int fd)
 
 	if (fd < 0)
 	{
-		return (free(buffer) ,NULL);
+		return (free(buffer), NULL);
 	}
 	buff = malloc(2);
 	if (!buff)

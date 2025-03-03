@@ -6,7 +6,7 @@
 /*   By: yel-alja <yel-alja@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/29 15:59:32 by yel-alja          #+#    #+#             */
-/*   Updated: 2025/01/18 21:28:28 by yel-alja         ###   ########.fr       */
+/*   Updated: 2025/03/03 12:41:45 by yel-alja         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,7 @@ typedef struct s_stack
 	struct s_stack	*next;
 }					t_stack;
 
-
-long long			ft_atoi(char *str);
+double				ft_atoi(char *str);
 char				**ft_split(char *s, char c);
 void				free_s(char **c);
 t_stack				*lst_new(int i, t_stack **a);
@@ -32,7 +31,7 @@ void				add_to_stack(t_stack **a, char *str, char **s);
 void				arg_lst(t_stack **a, char **argv, int argc);
 void				is_valid(char **str, t_stack *a);
 void				is_valid2(t_stack *a);
-int				list_lengh(t_stack *a);
+int					list_lengh(t_stack *a);
 void				free_list(t_stack *list);
 
 void				sort_three(t_stack **a);
@@ -54,15 +53,13 @@ void				rra(t_stack **a);
 void				rrb(t_stack **a);
 void				rrr(t_stack **a, t_stack **b);
 
-
-int				small_number(t_stack *a);
-int				biggest_number(t_stack *a);
-int				wich_half(t_stack *a, int i);
-int				small_great(t_stack *b, int i);
+int					small_number(t_stack *a);
+int					biggest_number(t_stack *a);
+int					wich_half(t_stack *a, int i);
+int					small_great(t_stack *b, int i);
 void				turk_algo(t_stack **a, t_stack **b);
-int				great_small(t_stack *a, int i);
+int					great_small(t_stack *a, int i);
 void				sort_four(t_stack **a, t_stack **b);
-int				count_moves(t_stack *b, int target);
-
+int					count_moves(t_stack *b, int target);
 
 #endif
