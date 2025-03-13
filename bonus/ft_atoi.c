@@ -22,10 +22,10 @@ int	sk_sp(char *str)
 	return (i);
 }
 
-long long	ft_atoi(char *str)
+double	ft_atoi(char *str)
 {
 	int			i;
-	long long	r;
+	double	r;
 	int			s;
 
 	r = 0;
