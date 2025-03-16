@@ -24,9 +24,9 @@ int	sk_sp(char *str)
 
 double	ft_atoi(char *str)
 {
-	int			i;
+	int		i;
 	double	r;
-	int			s;
+	int		s;
 
 	r = 0;
 	s = 1;

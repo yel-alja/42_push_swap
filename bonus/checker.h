@@ -6,7 +6,7 @@
 /*   By: yel-alja <yel-alja@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/19 09:26:22 by yel-alja          #+#    #+#             */
-/*   Updated: 2025/01/23 10:06:25 by yel-alja         ###   ########.fr       */
+/*   Updated: 2025/03/16 13:40:33 by yel-alja         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void				free_s(char **c);
 char				*get_next_line(int fd);
 void				arg_lst(t_stack **a, char **argv, int argc);
 char				**ft_split(char *s, char c);
-long long			ft_atoi(char *str);
+double				ft_atoi(char *str);
 t_stack				*lst_new(int i, t_stack **a);
 void				is_valid(char **str, t_stack *a);
 void				is_valid2(t_stack *a);

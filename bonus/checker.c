@@ -6,7 +6,7 @@
 /*   By: yel-alja <yel-alja@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/19 11:04:33 by yel-alja          #+#    #+#             */
-/*   Updated: 2025/02/05 09:42:17 by yel-alja         ###   ########.fr       */
+/*   Updated: 2025/03/16 13:45:33 by yel-alja         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,12 +22,14 @@ int	ft_strcmp(char *s1, char *s2)
 	return (s1[i] - s2[i]);
 }
 
-void	ft_error(char *line, t_stack *a)
+void	ft_error(char *line, t_stack *a, t_stack *b)
 {
 	write(2, "Error\n", 6);
 	get_next_line(-1);
 	free(line);
 	free_list(a);
+	if(b)
+		free_list(b);
 	exit(1);
 }
 
@@ -56,7 +58,7 @@ void	check_line(char *line, t_stack **a, t_stack **b)
 	else if (!ft_strcmp(line, "pb\n"))
 		pb(a, b);
 	else
-		ft_error(line, *a);
+		ft_error(line, *a ,*b);
 }
 
 void	checker(t_stack **a, t_stack **b)
@@ -70,8 +72,10 @@ void	checker(t_stack **a, t_stack **b)
 		free(line);
 		line = get_next_line(0);
 	}
-	if (is_sorted(*a) == 1)
+	if (is_sorted(*a) == 1 && (*b) == NULL)
 		write(1, "OK\n", 3);
 	else
 		write(1, "KO\n", 3);
+	if(*b)
+		free_list(*b);
 }
